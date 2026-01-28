@@ -6,5 +6,15 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: [],
+  // 빈 배열은 모든 경로에 매칭되므로 명시적으로 제외
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     */
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
 };
