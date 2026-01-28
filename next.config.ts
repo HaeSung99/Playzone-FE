@@ -24,7 +24,6 @@ const nextConfig: NextConfig = {
   turbopack: {},
 
   // 임시 무시 옵션(운영에선 제거 권장)
-  eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
 };
 
