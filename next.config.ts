@@ -20,6 +20,9 @@ const nextConfig: NextConfig = {
     return config;
   },
 
+  // Turbopack 설정 (Next.js 16+ 기본값)
+  turbopack: {},
+
   // 임시 무시 옵션(운영에선 제거 권장)
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
