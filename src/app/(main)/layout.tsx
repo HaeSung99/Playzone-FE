@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import '../globals.css'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
 
 export const metadata: Metadata = {
   title: 'My Company',
   description: 'Welcome to our company',
 }
+
+import ConditionalLayout from './components/ConditionalLayout'
 
 export default function RootLayout({
   children,
@@ -16,11 +16,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <Navbar />
-        <main>
-          <div>{children}</div>
-        </main>
-        <Footer />
+        <ConditionalLayout>{children}</ConditionalLayout>
       </body>
     </html>
   )

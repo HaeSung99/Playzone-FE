@@ -206,6 +206,20 @@ export const siteData = {
       description: "국가대표 출신으로 15년 이상의 지도 경력을 보유하고 있습니다. 정확한 기술과 전략을 전수합니다.",
       image: null // 이미지 영역
     }
+  ],
+
+  // 수강 신청 목록 (어드민 mock)
+  enrollments: [
+    { id: 1, classId: 1, className: "축구 정기반", applicantName: "홍길동", phone: "010-1111-2222", email: "hong@example.com", status: "PENDING", createdAt: "2026-01-20T10:00:00", version: 1 },
+    { id: 2, classId: 1, className: "축구 정기반", applicantName: "김철수", phone: "010-3333-4444", email: "kim@example.com", status: "APPROVED", createdAt: "2026-01-19T14:00:00", version: 1 },
+    { id: 3, classId: 2, className: "농구 중급반", applicantName: "이영희", phone: "010-5555-6666", email: "lee@example.com", status: "REJECTED", createdAt: "2026-01-18T09:00:00", version: 1 },
+    { id: 4, classId: 3, className: "테니스 주말반", applicantName: "박민수", phone: "010-7777-8888", email: "park@example.com", status: "PENDING", createdAt: "2026-01-22T11:00:00", version: 1 },
+  ],
+
+  // 문의 목록 (어드민 mock)
+  contacts: [
+    { id: 1, name: "홍길동", company: "A회사", type: "비즈니스 제안", phone: "010-1111-2222", email: "hong@example.com", message: "협업 문의드립니다.", status: "PENDING", memo: null, createdAt: "2026-01-20T10:00:00" },
+    { id: 2, name: "김철수", company: "", type: "기타 문의", phone: "010-3333-4444", email: "kim@example.com", message: "개인 레슨 문의합니다.", status: "ANSWERED", memo: "전화로 답변 완료", createdAt: "2026-01-19T14:00:00" },
   ]
 };
 
@@ -216,3 +230,6 @@ export const getNotices = () => siteData.notices;
 export const getNoticeById = (id: number) => siteData.notices.find(notice => notice.id === id);
 export const getTeamMembers = () => siteData.teamMembers;
 export const getSiteInfo = () => siteData.siteInfo;
+export const getEnrollments = () => siteData.enrollments;
+export const getEnrollmentsByClassId = (classId: number) => siteData.enrollments.filter(e => e.classId === classId);
+export const getContacts = () => siteData.contacts;

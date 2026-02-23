@@ -25,7 +25,8 @@ export default function Navbar({ isMain = false }: { isMain?: boolean }) {
     { href: '/team', label: '팀소개' },
     { href: '/class', label: '클래스' },
     { href: '/business', label: '비즈니스' },
-    { href: '/contact', label: 'Contact Us' }
+    { href: '/contact', label: 'Contact Us' },
+    { href: '/admin', label: '관리자페이지' }
   ];
 
   return (
